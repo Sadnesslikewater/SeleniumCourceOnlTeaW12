@@ -1,6 +1,7 @@
 package pl.coderslab.seleniumcource;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -36,7 +37,8 @@ public class FindBy {
         enterYourEmailInput.sendKeys("test@test.com");
 
     }
-//Na stronie https://hotel-testlab.coderslab.pl/en/ zidentyfikuj następująca pola/przyciski
+
+    //Na stronie https://hotel-testlab.coderslab.pl/en/ zidentyfikuj następująca pola/przyciski
 // za pomocą lokalizatora by.name:
 //(pole tekstowe) Hotel Location
 //(przycisk) Search Now
@@ -83,7 +85,8 @@ public class FindBy {
         WebElement radioMr = driver.findElement(By.cssSelector("input#id_gender1"));
         radioMr.click();
     }
-//Będąc na stronie rejestracji nowego użytkownika (patrz zadanie 3),
+
+    //Będąc na stronie rejestracji nowego użytkownika (patrz zadanie 3),
 // wyszukaj za pomocą lokalizatorów xpath wszystkie wymagane pola tekstowe
 // oraz wypełnij je dowolnymi danymi:
 //
@@ -133,20 +136,23 @@ public class FindBy {
         //myPersonalInformationBtn.click();
 
     }
-
-
-
-
+}
+/*
     @BeforeEach
-    public void beforeEach() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        this.driver = new ChromeDriver();
-        this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(16));
-    }
+    public static void beforeEach(){
+        System.out.println("this will be before EACH test");
+}
+
+    @BeforeAll
+    public static void afterAll(){
+        System.out.println("this will be before ALL test");
+        }
+}
 
 //    @AfterEach
 //    public void afterEach() {
 //        this.driver.quit();
 //    }
-}
 
+
+*/
