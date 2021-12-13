@@ -34,8 +34,5 @@ public class homework03 {
         commentInput.sendKeys("To jest mój pierwszy automat testowy");
         WebElement submitBtn = driver.findElement(By.id("submit"));
         submitBtn.click();
-
-
-
     }
 }
