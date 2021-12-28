@@ -15,5 +15,10 @@ public class LandingPage {
         WebElement signInBtn = driver.findElement(By.className("hide_xs"));
         signInBtn.click();
     }
+
+    public void selectHotelByName(){
+        WebElement selectHotelDropDown = driver.findElement(By.id("hotel_cat_name"));
+        selectHotelDropDown.click();
+    }
 }
 

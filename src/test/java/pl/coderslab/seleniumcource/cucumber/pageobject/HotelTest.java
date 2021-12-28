@@ -1,9 +1,11 @@
-package pl.coderslab.seleniumcource.pageobject;
+package pl.coderslab.seleniumcource.cucumber.pageobject;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pl.coderslab.seleniumcource.pageobject.LandingPage;
+import pl.coderslab.seleniumcource.pageobject.LoginPage;
 
 import java.time.Duration;
 import java.time.Month;
@@ -17,10 +19,10 @@ public class HotelTest {
 
     @Test
     public void shouldCreateNewAccount() {
-        driver.get("https://hotel-testlab.coderslab.pl/en/");
+        driver.get("https://hotel-testlab.coderslab.pl/en/");//inna!!! my account
 
-        LandingPage landingPage = new LandingPage(driver);
-        landingPage.clickSignIn();
+        //LandingPage landingPage = new LandingPage(driver);
+        //landingPage.clickSignIn();
 
         LoginPage loginPage = new LoginPage(driver);
         String randomEmail = UUID.randomUUID() + "@mail.pl";

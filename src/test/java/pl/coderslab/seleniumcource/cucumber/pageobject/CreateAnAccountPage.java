@@ -1,4 +1,4 @@
-package pl.coderslab.seleniumcource.pageobject;
+package pl.coderslab.seleniumcource.cucumber.pageobject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,7 +32,6 @@ public class CreateAnAccountPage {
     private WebElement registerButton;
 
     public CreateAnAccountPage(WebDriver driver) {
-
         PageFactory.initElements(driver, this);
     }
 
@@ -63,7 +62,6 @@ public class CreateAnAccountPage {
     }
 
     public void clickRegister() {
-
         registerButton.click();
     }
 
@@ -78,7 +76,6 @@ public class CreateAnAccountPage {
     }
 
     public String getEmail() {
-
         return emailInput.getAttribute("value");
     }
 }

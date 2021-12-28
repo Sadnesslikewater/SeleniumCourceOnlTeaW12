@@ -1,4 +1,4 @@
-package pl.coderslab.seleniumcource.example;
+package pl.coderslab.seleniumcource.examples;
 
 import org.junit.jupiter.api.Test;
 

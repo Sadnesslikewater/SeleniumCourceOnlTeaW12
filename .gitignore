@@ -2,7 +2,7 @@
 target/
 out/
 *.exe
-*.inl
+*.iml
 # Compiled class file
 *.class
 

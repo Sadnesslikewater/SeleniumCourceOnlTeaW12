@@ -1,4 +1,4 @@
-package pl.coderslab.seleniumcource.pageobject;
+package pl.coderslab.seleniumcource.cucumber.pageobject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +8,6 @@ public class MyAccountPage {
     private WebDriver driver;
 
     public MyAccountPage(WebDriver driver) {
-
         this.driver = driver;
     }
 

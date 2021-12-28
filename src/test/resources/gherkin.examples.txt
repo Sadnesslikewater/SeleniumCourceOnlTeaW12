@@ -1,0 +1,28 @@
+1. wyszukiwanie dowolnej frazy w wyszukiwarce Qwant,
+2. logowanie do portalu edukacyjnego Coders Lab https://lms.coderslab.pl
+3. uruchomienie pierwszej prezentacji z preworku Java na kursie testera automatyzującego.
+
+Ad 1. wyszukiwanie dowolnej frazy w wyszukiwarce Qwant
+Scenario search for "w pustyni i w puszczy" in https://www.qwant.com/
+Given web page https://www.qwant.com/ opened in browser
+When search phrase "w pustyni i w puszczy" entered in search input box
+And key enter pressed
+Then first 3 search results titles contain phrase "w pustyni i w puszczy".
+
+Ad 2. logowanie do portalu edukacyjnego Coders Lab https://lms.coderslab.pl
+Scenario log into "Coders Lab" educational portal at https://lms.coderslab.pl
+Given web page https://lms.coderslab.pl opened in browser
+When Write email address entered in input box
+And password entered in input box
+And key zaloguj pressed
+Then you are logged into "Coders Lab" educational portal
+And name of logged in person appears in right hand upper side
+
+Ad 3. uruchomienie pierwszej prezentacji z preworku Java na kursie testera automatyzującego
+Scenario open first Java prework presentation in test automation course
+Given user logged in
+And web page https://lms.coderslab.pl/courses opened in browser
+When click on Test automation course
+And click on Prework "pokaż rozdziały" button
+And click on first "Wstęp do kursu" chapter
+Then you will see first presentation in prework Java test automation course.
