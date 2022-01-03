@@ -1,107 +1,46 @@
-package pl.coderslab.seleniumcource.cucumber.pageobject;
+package pl.coderslab.seleniumcource.cucumber.zadaniazaliczeniowe;
 
-import java.time.Month;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class UserData {
-    private boolean isMr;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String password;
-    private int days;
-    private Month month;
-    private int years;
-    private boolean isNewsletter;
-    private boolean isGetSpecialOffers;
+public class AddressData {
+    //alias, address, city, zipCode, country, phone)
+    @FindBy(name = "alias")
+    private WebElement aliasInput;
 
-    public boolean isMr() {
-        return isMr;
-    }
+    @FindBy(name = "address")
+    private WebElement addressInput;
 
-    public UserData setMr(boolean mr) {
-        isMr = mr;
-        return this;
-    }
+    @FindBy(name = "city")
+    private WebElement cityInput;
 
-    public String getFirstName() {
-        return firstName;
-    }
+    @FindBy(name = "zipCode")
+    private WebElement zipCodeInput;
 
-    public UserData setFirstName(String firstName) {
-        this.firstName = firstName;
-        return this;
-    }
+    @FindBy(name = "country")
+    private WebElement countryInput;
 
-    public String getLastName() {
-        return lastName;
-    }
+    @FindBy(name = "phone")
+    private WebElement phoneInput;
 
-    public UserData setLastName(String lastName) {
-        this.lastName = lastName;
-        return this;
-    }
+    private UserData userData;
 
-    public String getEmail() {
-        return email;
-    }
+    public AddressData(WebDriver driver) {PageFactory.initElements(driver, this);}
 
-    public UserData setEmail(String email) {
-        this.email = email;
-        return this;
-    }
+    //public void formFilledWithData(Object userData){
+    public void formFilledWithData(AddressData addressData){
 
-    public String getPassword() {
-        return password;
-    }
+        aliasInput.sendKeys(this.userData.getAlias());
+        addressInput.sendKeys(this.userData.getAddress());
+        cityInput.sendKeys(this.userData.getCity());
+        zipCodeInput.sendKeys(String.valueOf(this.userData.getZipCode()));
+        countryInput.sendKeys(this.userData.getCountry());
+        phoneInput.sendKeys(String.valueOf(this.userData.getPhone()));
 
-    public UserData setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-
-    public int getDays() {
-        return days;
-    }
-
-    public UserData setDays(int days) {
-        this.days = days;
-        return this;
-    }
-
-    public Month getMonth() {
-        return month;
-    }
-
-    public UserData setMonth(Month month) {
-        this.month = month;
-        return this;
-    }
-
-    public int getYears() {
-        return years;
-    }
-
-    public UserData setYears(int years) {
-        this.years = years;
-        return this;
-    }
-
-    public boolean isNewsletter() {
-        return isNewsletter;
-    }
-
-    public UserData setNewsletter(boolean newsletter) {
-        isNewsletter = newsletter;
-        return this;
-    }
-
-    public boolean isGetSpecialOffers() {
-        return isGetSpecialOffers;
-    }
-
-    public UserData setGetSpecialOffers(boolean getSpecialOffers) {
-        isGetSpecialOffers = getSpecialOffers;
-        return this;
     }
 }
+
+
 
