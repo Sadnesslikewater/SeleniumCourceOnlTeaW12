@@ -2,7 +2,6 @@ package pl.coderslab.seleniumcource.cucumber.zadaniazaliczeniowe;
 
 public class UserData {
 
-    // alias, address, city, zipCode, country, phone
     private String alias;
     private String address;
     private String city;
