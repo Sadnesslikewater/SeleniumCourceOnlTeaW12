@@ -8,12 +8,13 @@ Feature: Mystore Login
     And Second key sign in pressed
     When Addresses button pressed
     And Create new address button pressed
-    Then Form filled with data: <alias>, <address>, <city>, <zipCode>, <country>, <phone>
-    And Correctness of data checked
+    Then Form filled with data: <alias>, <address>, <city>, <zipCode>, <country>, <phone> and data checked
     And Save button pressed
+    And New account deleted
+    And Account deletion message displayed
     Examples:
-      | alias | address | city   | zipCode | country        | phone     |
-      | Mario | PipeStr | London | 00102   | United Kingdom | 602987654 |
+      | alias | address   | city   | zipCode | country        | phone     |
+      | Mario | PipeStr 2 | London | 12-456  | United Kingdom | 602987654 |
 
 
 
