@@ -5,7 +5,7 @@ public class UserData {
     private String alias;
     private String address;
     private String city;
-    private int zipCode;
+    private String zipCode;
     private String country;
     private int phone;
 
@@ -31,10 +31,10 @@ public class UserData {
         this.city = city;
         return this;
     }
-    public int getZipCode() {
+    public CharSequence getZipCode() {
         return zipCode;
     }
-    public UserData setZipCode(int zipCode) {
+    public UserData setZipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
