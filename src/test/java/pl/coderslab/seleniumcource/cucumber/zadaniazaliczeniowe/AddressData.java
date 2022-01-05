@@ -6,38 +6,36 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class AddressData {
-    //alias, address, city, zipCode, country, phone)
     @FindBy(name = "alias")
     private WebElement aliasInput;
 
-    @FindBy(name = "address")
+    @FindBy(name = "address1")
     private WebElement addressInput;
 
     @FindBy(name = "city")
     private WebElement cityInput;
 
-    @FindBy(name = "zipCode")
+    @FindBy(name = "postcode")
     private WebElement zipCodeInput;
 
-    @FindBy(name = "country")
+    @FindBy(name = "id_country")
     private WebElement countryInput;
 
     @FindBy(name = "phone")
     private WebElement phoneInput;
 
-    private UserData userData;
 
-    public AddressData(WebDriver driver) {PageFactory.initElements(driver, this);}
+    public AddressData(WebDriver driver)
+    {PageFactory.initElements(driver, this);}
 
-    //public void formFilledWithData(Object userData){
-    public void formFilledWithData(AddressData addressData){
+    public void formFilledWithData(UserData userData){
 
-        aliasInput.sendKeys(this.userData.getAlias());
-        addressInput.sendKeys(this.userData.getAddress());
-        cityInput.sendKeys(this.userData.getCity());
-        zipCodeInput.sendKeys(String.valueOf(this.userData.getZipCode()));
-        countryInput.sendKeys(this.userData.getCountry());
-        phoneInput.sendKeys(String.valueOf(this.userData.getPhone()));
+        aliasInput.sendKeys(userData.getAlias());
+        addressInput.sendKeys(userData.getAddress());
+        cityInput.sendKeys(userData.getCity());
+        zipCodeInput.sendKeys(userData.getZipCode());
+        countryInput.sendKeys(userData.getCountry());
+        phoneInput.sendKeys(String.valueOf(userData.getPhone()));
 
     }
 }
