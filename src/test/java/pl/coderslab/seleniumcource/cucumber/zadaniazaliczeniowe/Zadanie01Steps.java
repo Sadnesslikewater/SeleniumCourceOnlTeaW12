@@ -20,7 +20,7 @@ public class Zadanie01Steps {
     private WebDriver driver;
     private Object UserData;
 
-    @Given("^Web page opened (.*)$")
+    @Given("^Web page (.*) opened$")
     public void WebPageOpenedInBrowser(String url) {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         this.driver = new ChromeDriver();
