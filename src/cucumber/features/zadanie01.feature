@@ -1,7 +1,7 @@
 Feature: Mystore Login
 
   Scenario Outline: log into MyStore store at https://mystore-testlab.coderslab.pl and create new address
-    Given Web page opened https://mystore-testlab.coderslab.pl
+    Given Web page https://mystore-testlab.coderslab.pl opened
     And First key sign in pressed
     And Email address entered in input box
     And Password entered in input box
