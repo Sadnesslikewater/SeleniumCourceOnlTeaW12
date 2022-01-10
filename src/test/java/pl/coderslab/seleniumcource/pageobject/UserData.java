@@ -87,6 +87,7 @@ public class UserData {
     }
 
     public boolean isNewsletter() {
+
         return isNewsletter;
     }
 
@@ -96,6 +97,7 @@ public class UserData {
     }
 
     public boolean isGetSpecialOffers() {
+
         return isGetSpecialOffers;
     }
 
@@ -103,5 +105,6 @@ public class UserData {
         isGetSpecialOffers = getSpecialOffers;
         return this;
     }
+
 }
 
