@@ -23,14 +23,12 @@ public class CoderslabLoginSteps {
         this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         this.driver.get("https:lms.coderslab.pl/");
     }
-
     @When("^email address entered in input box$")
     public void emailAddressEntered() {
         WebElement emailAddressInput = driver.findElement(By.id("username"));
         emailAddressInput.clear();
         emailAddressInput.sendKeys("...");
     }
-
     @And("^password entered in input box$")
     public void passwordEntered() {
         WebElement passwordInput = driver.findElement(By.id("password"));
