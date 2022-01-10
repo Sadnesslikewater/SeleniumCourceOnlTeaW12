@@ -85,7 +85,6 @@ public class Zadanie01Steps {
         assertEquals(phone, userData.getPhone());
         addressData.formFilledWithData(userData);
     }
-
     @And("^Save button pressed$")
     public void saveButtonPressed() {
         WebElement saveBtn = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/form/footer/button"));
